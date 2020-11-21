@@ -1,30 +1,63 @@
-const firstRow = 'мама мыла рану';
-const secondRow = 'собака друг человека';
+const $controlButtons = document.querySelectorAll('button')
 
-function getLetters(string) {
-  let letterCount = 0;
-  for (let i = 0; i <= string.length; i++) {
-    string[i] === 'а' ? letterCount += 1 : ''
-  }
-  return letterCount
+const character = {
+  name: 'Pikachu',
+  defaultHP: 100,
+  damageHP: 100,
+  elHP: document.getElementById('health-character'),
+  elProgressbar: document.getElementById('progressbar-character'),
+  attack: [20, 80]
 }
 
-function getRow(firstRow, secondRow) {
-  return getLetters(firstRow) - getLetters(secondRow) > 0 ? firstRow : secondRow
+const enemy = {
+  name: 'Charmander',
+  defaultHP: 100,
+  damageHP: 100,
+  elHP: document.getElementById('health-enemy'),
+  elProgressbar: document.getElementById('progressbar-enemy'),
 }
 
-console.log(getRow(firstRow, secondRow)); // мама мыла раму
+const random = (num) => {
+  return Math.ceil(Math.random() * num)
+}
 
-function formattedPhone(phone) {
-  if (phone.length !== 12) return undefined
-  for (let i = 0; i <= phone.length; i++) {
-    switch (i) {
-      case 2:
+const renderHPLife = (person) => person.elHP.innerText = person.damageHP + ' / ' + person.defaultHP
 
-        break
+const renderProgressbarHP = (person) => {
+  person.elProgressbar.style.width = person.damageHP + '%'
+}
+
+const renderHP = (person) => {
+  renderHPLife(person)
+  renderProgressbarHP(person)
+}
+
+const changeHP = (count, person) => {
+  if (person.damageHP <= count) {
+    person.damageHP = 0
+    alert('Бедный ' + person.name + ' проиграл бой!')
+    for (let i = 0; i < $controlButtons.length; i++) {
+      $controlButtons[i].disabled = true
     }
+  } else {
+    person.damageHP -= count
   }
-  console.log(arr)
+
+  renderHP(person)
 }
 
-console.log(formattedPhone('+71234567890')); // +7 (123) 456-78-90
+for (let i = 0; i < $controlButtons.length; i++) {
+  $controlButtons[i].addEventListener('click', () => {
+    changeHP(random(character.attack[i]), enemy)
+  })
+}
+
+
+
+const init = () => {
+  console.log('Start Game')
+  renderHP(character)
+  renderHP(enemy)
+}
+
+init()

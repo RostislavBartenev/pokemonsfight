@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="312df343-0e87-40e0-a3c9-ad9d776d20c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +31,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -53,7 +55,9 @@
       <workItem from="1605525244659" duration="131000" />
       <workItem from="1605525845980" duration="2628000" />
       <workItem from="1605531867560" duration="471000" />
-      <workItem from="1605692281616" duration="2476000" />
+      <workItem from="1605692281616" duration="2602000" />
+      <workItem from="1605711834326" duration="360000" />
+      <workItem from="1605949255484" duration="4280000" />
     </task>
     <servers />
   </component>
@@ -61,6 +65,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="238" y="73" key="SettingsEditor" timestamp="1605950831167">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="238" y="73" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1605950831167" />
+    <state width="625" height="500" key="SwitcherDM" timestamp="1605950270705">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1605950270705" />
+    <state x="467" y="238" width="746" height="574" key="find.popup" timestamp="1605950263484">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="467" y="238" width="746" height="574" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605950263484" />
     <state x="421" y="18" width="838" height="1032" key="search.everywhere.popup" timestamp="1605530241743">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

@@ -8,24 +8,16 @@ class Selectors {
 }
 
 class Pokemon extends Selectors {
-  constructor({ name, hp, type, selectors, damage }) {
+  constructor({ name, hp, type, selectors, damage, attacks = [], img}) {
     super(selectors)
     this.name = name
     this.hp = {
       current: hp,
       total: hp,
-    }
-    this.attack = {
-      0: {
-        count: 6,
-        damage: damage[0]
-      },
-      1: {
-        count: 3,
-        damage: damage[1]
-      },
     },
     this.type = type
+    this.attacks = attacks
+    this.img = img,
 
     this.renderHP()
   }
@@ -41,7 +33,15 @@ class Pokemon extends Selectors {
     cb && cb(count)
   }
 
+  setImg = (selector) => {
+    const $elImg = $getElById(selector);
+    $elImg.src = this.img;
+  }
 
+  setName = (selector) => {
+    const $elName = $getElById(selector)
+    $elName.innerText = this.name
+  }
 
   renderHP = () => {
     this.renderHPLife()

@@ -49,11 +49,9 @@ class Game {
           const req = await fetch(`https://reactmarathon-api.netlify.app/api/fight?player1id=${p1.id}&attackId=${item.id}&player2id=${p2.id}`)
           const res = await req.json()
 
-           console.log(res)
-           p2.changeHP(res['kick']['player2'], logs(res['kick']['player2'], p2))
-           p1.changeHP(res['kick']['player1'], logs(res['kick']['player1'], p1))
+           p2.changeHP(res['kick']['player2'], logs(res['kick']['player2'], p1))
+           p1.changeHP(res['kick']['player1'], logs(res['kick']['player1'], p2))
 
-          console.log(res)
         }
 
         getFight()

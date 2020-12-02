@@ -8,7 +8,7 @@ class Selectors {
 }
 
 class Pokemon extends Selectors {
-  constructor({ name, hp, type, selectors, damage, attacks = [], img}) {
+  constructor({ name, hp, type, selectors, damage, attacks = [], img, id}) {
     super(selectors)
     this.name = name
     this.hp = {
@@ -17,7 +17,8 @@ class Pokemon extends Selectors {
     },
     this.type = type
     this.attacks = attacks
-    this.img = img,
+    this.img = img
+    this.id = id
 
     this.renderHP()
   }
@@ -25,7 +26,7 @@ class Pokemon extends Selectors {
   changeHP = (count, cb) => {
     this.hp.current -= count
 
-    if (this.hp.current <= 0) {
+    if (this.hp.current - count <= 0) {
       this.hp.current = 0
     }
 
@@ -44,6 +45,7 @@ class Pokemon extends Selectors {
   }
 
   renderHP = () => {
+    console.log(1)
     this.renderHPLife()
     this.renderProgressbarHP()
   }
